@@ -1,0 +1,110 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Pure Black */
+    color: #fff; /* White Text */
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .instruction-section {
+    background-color: #111; /* Very dark grey (near black) */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #20e070; /* Bright Green */
+    font-size: 18px;
+    line-height: 1.6;
+    color: #eee;
+    border-radius: 8px;
+  }
+  
+  
+  
+  .input-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .input-section button {
+    margin: 5px;
+  }
+  
+  
+  .input-section input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 18px;
+    border: 2px solid #20e070;
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    margin-right: 10px;
+  }
+  
+  .input-section button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #20e070;
+    color: #000;
+    transition: background-color 0.3s;
+    margin: 5px;
+  }
+  
+  .input-section button:hover {
+    background-color: #18b85a;
+  }
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-section img {
+    margin-top: 20px;
+    width: 940px;
+    height: 788px;
+    object-fit: cover; 
+    border: 5px solid #ccc;
+  }
+  
+  #timer {
+    text-align: center;
+    font-size: 24px;
+    color: #20e070;
+    margin-top: 10px;
+  }
+
+ #loadingMessage {
+  font-size: 20px;
+  color: #20e070;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ccc;
+  border-top: 3px solid #20e070;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+  
+  /* Keyframes for spin animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

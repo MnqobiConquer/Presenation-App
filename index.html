@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Public Speaking Practice</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="instruction-section">
+        <p>
+          Welcome! 🎤 To practice your public speaking:
+          <br>
+          ➔ Enter a *keyword** related to your topic. <br>
+          ➔ 5 random images based on that keyword. <br>
+          ➔ You have 30 seconds to speak about each image. <br>
+          <br><br>
+          Let's build your confidence one image at a time!
+        </p>
+      </div>
+
+    <div class="input-section">
+        <input type="text" id="keywordInput" placeholder="Enter a keyword...">
+        <button onclick="startPresentation()">Start</button>
+        <button onclick="endPresentation()">End</button>
+      </div>
+
+    <div id="loadingMessage" hidden>
+        <div class="spinner"></div>
+        Loading images, please wait...
+    </div>
+      
+
+    <div class="image-section">
+      <img id="displayedImage" src="" alt="Your topic will appear here" hidden>
+    </div>
+
+    <div id="timer"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
