@@ -1,88 +1,104 @@
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000; /* Pure Black */
-    color: #fff; /* White Text */
-    margin: 0;
-    padding: 20px;
-    min-height: 100vh;
-  }
-  
-  
-  .container {
-    max-width: 600px;
-    margin: auto;
-  }
+  font-family: 'Arial', sans-serif;
+  background-color: #000; 
+  color: #fff; 
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 
-  .instruction-section {
-    background-color: #111; /* Very dark grey (near black) */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #20e070; /* Bright Green */
-    font-size: 18px;
-    line-height: 1.6;
-    color: #eee;
-    border-radius: 8px;
-  }
-  
-  
-  
-  .input-section {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .input-section button {
-    margin: 5px;
-  }
-  
-  
-  .input-section input[type="text"] {
-    padding: 10px;
-    width: 300px;
-    font-size: 18px;
-    border: 2px solid #20e070;
-    background-color: #000;
-    color: #fff;
-    border-radius: 6px;
-    margin-right: 10px;
-  }
-  
-  .input-section button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #20e070;
-    color: #000;
-    transition: background-color 0.3s;
-    margin: 5px;
-  }
-  
-  .input-section button:hover {
-    background-color: #18b85a;
-  }
-  .image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .image-section img {
-    margin-top: 20px;
-    width: 940px;
-    height: 788px;
-    object-fit: cover; 
-    border: 5px solid #ccc;
-  }
-  
-  #timer {
-    text-align: center;
-    font-size: 24px;
-    color: #20e070;
-    margin-top: 10px;
-  }
+.container {
+  max-width: 600px;
+  margin: auto;
+}
 
- #loadingMessage {
+
+.instruction-section {
+  background-color: #111; 
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #20e070; 
+  font-size: 18px;
+  line-height: 1.6;
+  color: #eee;
+  border-radius: 8px;
+  width: 100%; 
+  box-sizing: border-box;
+}
+
+.input-section {
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.input-section input[type="text"] {
+  padding: 10px;
+  width: 80%; 
+  max-width: 400px; 
+  font-size: 18px;
+  border: 2px solid #20e070;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+
+.input-section button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #20e070;
+  color: #000;
+  transition: background-color 0.3s;
+  margin: 5px;
+  width: 80%; 
+  max-width: 400px; 
+}
+
+
+.input-section button:hover {
+  background-color: #18b85a;
+}
+
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.image-section img {
+  margin-top: 20px;
+  width: 80%; 
+  max-width: 1024px; 
+  height: auto; 
+  object-fit: cover;
+  border: 5px solid #20e070;
+  border-radius: 12px;
+}
+
+
+#timer {
+  text-align: center;
+  font-size: 24px;
+  color: #20e070;
+  margin-top: 10px;
+}
+
+
+#loadingMessage {
   font-size: 20px;
   color: #20e070;
   margin: 20px;
@@ -92,7 +108,7 @@ body {
   gap: 10px;
 }
 
-/* Spinner Animation */
+
 .spinner {
   width: 20px;
   height: 20px;
@@ -101,10 +117,55 @@ body {
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-  
-  /* Keyframes for spin animation */
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .instruction-section {
+    padding: 15px;
   }
-  
+
+  .input-section input[type="text"],
+  .input-section button {
+    width: 90%; 
+  }
+
+  #timer {
+    font-size: 20px; 
+  }
+
+  .image-section img {
+    width: 90%; 
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .instruction-section {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .input-section input[type="text"],
+  .input-section button {
+    width: 100%; 
+    font-size: 16px;
+  }
+
+  #timer {
+    font-size: 18px; 
+  }
+
+  .image-section img {
+    width: 100%; 
+  }
+}
